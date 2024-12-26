@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+
+from prophet.config import Config, configure_logging, seed_everything
+from prophet.evaluator import evaluate
+
+seed_everything()
+configure_logging()
+
+evaluate(
+    Config.Path.DATA_DIR / Config.Dataset.TEST_FILE,
+    Config.Path.MODELS_DIR / Config.Model.FILE_NAME,
+    Config.Path.REPORTS_DIR / Config.Evaluation.REPORT_FILE,
+)

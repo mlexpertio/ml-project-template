@@ -1,0 +1,59 @@
+schema: '2.0'
+stages:
+  build-dataset:
+    cmd: bin/dataset
+    deps:
+    - path: bin/dataset
+      hash: md5
+      md5: d8f7ebc35fa2283d4445421a2f791084
+      size: 220
+      isexec: true
+    outs:
+    - path: artefacts/data
+      hash: md5
+      md5: 9d70b83109c16f38db9824510d493f2c.dir
+      size: 3111
+      nfiles: 2
+  train:
+    cmd: bin/train
+    deps:
+    - path: artefacts/data
+      hash: md5
+      md5: 9d70b83109c16f38db9824510d493f2c.dir
+      size: 3111
+      nfiles: 2
+    - path: bin/train
+      hash: md5
+      md5: add344380d13b83d6b657faf8690662f
+      size: 197
+      isexec: true
+    outs:
+    - path: artefacts/models
+      hash: md5
+      md5: b18a266572d3f0f253ea66dc771ef401.dir
+      size: 941
+      nfiles: 1
+  eval:
+    cmd: bin/eval
+    deps:
+    - path: artefacts/data
+      hash: md5
+      md5: 9d70b83109c16f38db9824510d493f2c.dir
+      size: 3111
+      nfiles: 2
+    - path: artefacts/models
+      hash: md5
+      md5: b18a266572d3f0f253ea66dc771ef401.dir
+      size: 941
+      nfiles: 1
+    - path: bin/eval
+      hash: md5
+      md5: ac3aa9569db068e425c682e68f6f3d8c
+      size: 351
+      isexec: true
+    outs:
+    - path: artefacts/reports
+      hash: md5
+      md5: 12a458ef38ff5f3fe8dcbd0ca9bbe99e.dir
+      size: 17
+      nfiles: 1

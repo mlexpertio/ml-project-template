@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+
+from prophet.config import Config, configure_logging, seed_everything
+from prophet.trainer import train
+
+seed_everything()
+configure_logging()
+
+train(Config.Path.DATA_DIR / Config.Dataset.TRAIN_FILE, Config.Path.MODELS_DIR)

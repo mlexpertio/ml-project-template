@@ -1,0 +1,30 @@
+[project]
+name = "prophet"
+version = "0.1.0"
+description = "Description for your ML project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dvc>=3.58.0",
+    "pandas>=2.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "fastparquet>=2024.11.0",
+    "loguru>=0.7.3",
+    "pytest>=8.3.4",
+    "ruff>=0.8.3",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
+
+[tool.setuptools]
+packages = ["prophet"]

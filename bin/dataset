@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+from prophet.config import Config, configure_logging, seed_everything
+from prophet.dataset_builder import build_dataset
+
+seed_everything()
+configure_logging()
+
+
+build_dataset(Config.Path.DATA_DIR)

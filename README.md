@@ -2,6 +2,17 @@
 
 Starter template for your Machine Learning/AI projects.
 
+Features:
+
+- [`dvc`](https://dvc.org/) for data versioning and pipeline management (reproducibility)
+- [`FastAPI`](https://fastapi.tiangolo.com/) for serving the model
+- [`uv`](https://docs.astral.sh/uv/) package manager
+- [`ruff`](https://docs.astral.sh/ruff/) for linting and formatting
+- [`pytest`](https://docs.pytest.org/en/stable/) for testing
+- [`loguru`](https://loguru.readthedocs.io/en/stable/) for logging
+- [`Docker`](https://www.docker.com/) for containerization
+
+
 ## Install
 
 Create and activate a virtual environment:

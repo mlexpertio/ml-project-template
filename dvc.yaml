@@ -1,22 +1,22 @@
 stages:
   build-dataset:
-    cmd: bin/dataset
+    cmd: bin/build-dataset
     deps:
-    - bin/dataset
+    - bin/build-dataset
     outs:
     - artefacts/data
-  train:
-    cmd: bin/train
+  train-model:
+    cmd: bin/train-model
     deps:
     - artefacts/data
-    - bin/train
+    - bin/train-model
     outs:
     - artefacts/models
-  eval:
-    cmd: bin/eval
+  evaluate:
+    cmd: bin/evaluate
     deps:
     - artefacts/data
     - artefacts/models
-    - bin/eval
+    - bin/evaluate
     outs:
     - artefacts/reports

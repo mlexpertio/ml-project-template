@@ -1,9 +1,9 @@
 schema: '2.0'
 stages:
   build-dataset:
-    cmd: bin/dataset
+    cmd: bin/build-dataset
     deps:
-    - path: bin/dataset
+    - path: bin/build-dataset
       hash: md5
       md5: d8f7ebc35fa2283d4445421a2f791084
       size: 220
@@ -47,6 +47,49 @@ stages:
       size: 941
       nfiles: 1
     - path: bin/eval
+      hash: md5
+      md5: ac3aa9569db068e425c682e68f6f3d8c
+      size: 351
+      isexec: true
+    outs:
+    - path: artefacts/reports
+      hash: md5
+      md5: 12a458ef38ff5f3fe8dcbd0ca9bbe99e.dir
+      size: 17
+      nfiles: 1
+  train-model:
+    cmd: bin/train-model
+    deps:
+    - path: artefacts/data
+      hash: md5
+      md5: 9d70b83109c16f38db9824510d493f2c.dir
+      size: 3111
+      nfiles: 2
+    - path: bin/train-model
+      hash: md5
+      md5: bf994dd02d5406be690168be84e0a1e3
+      size: 247
+      isexec: true
+    outs:
+    - path: artefacts/models
+      hash: md5
+      md5: 4b74c6802366075305ab570de91b37a1.dir
+      size: 941
+      nfiles: 1
+  evaluate:
+    cmd: bin/evaluate
+    deps:
+    - path: artefacts/data
+      hash: md5
+      md5: 9d70b83109c16f38db9824510d493f2c.dir
+      size: 3111
+      nfiles: 2
+    - path: artefacts/models
+      hash: md5
+      md5: 4b74c6802366075305ab570de91b37a1.dir
+      size: 941
+      nfiles: 1
+    - path: bin/evaluate
       hash: md5
       md5: ac3aa9569db068e425c682e68f6f3d8c
       size: 351

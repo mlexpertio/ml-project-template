@@ -25,8 +25,32 @@ uv pip install -e .
 
 ## Reproduce
 
+The project contains three different stages defined in `dvc.yaml`.
+
+- `dataset`: Creates a dataset from the raw data:
+
 ```bash
-uv run dvc repro build-dataset
+uv run dvc repro dataset
+```
+
+- `train`: Trains a model using the dataset:
+
+```bash
+uv run dvc repro train
+```
+
+- `eval`: Evaluates the model using the test dataset:
+
+```bash
+uv run dvc repro eval
+```
+
+## API server
+
+Start the FastAPI server:
+
+```bash
+uv run python app.py
 ```
 
 ## Tests

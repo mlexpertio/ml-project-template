@@ -15,6 +15,7 @@ dependencies = [
 dev = [
     "fastparquet>=2024.11.0",
     "loguru>=0.7.3",
+    "pre-commit>=4.0.1",
     "pytest>=8.3.4",
     "ruff>=0.8.3",
 ]

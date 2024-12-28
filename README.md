@@ -15,6 +15,13 @@ Features:
 
 ## Install
 
+Clone the repository:
+
+```bash
+git clone git@github.com:mlexpertio/ml-project-template.git .
+cd ml-project-template
+```
+
 Create and activate a virtual environment:
 
 ```bash
@@ -32,6 +39,12 @@ Install package in editable mode:
 
 ```bash
 uv pip install -e .
+```
+
+Install pre-commit hooks:
+
+```bash
+uv run pre-commit install
 ```
 
 ## Reproduce

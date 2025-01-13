@@ -67,13 +67,13 @@ stages:
       nfiles: 2
     - path: bin/train-model
       hash: md5
-      md5: bf994dd02d5406be690168be84e0a1e3
-      size: 247
+      md5: 83bd51f7d4faecabed9bbe8e7b171357
+      size: 219
       isexec: true
     outs:
     - path: artefacts/models
       hash: md5
-      md5: 4b74c6802366075305ab570de91b37a1.dir
+      md5: 32e48de475b74a600d36339e135666d8.dir
       size: 941
       nfiles: 1
   evaluate:
@@ -86,7 +86,7 @@ stages:
       nfiles: 2
     - path: artefacts/models
       hash: md5
-      md5: 4b74c6802366075305ab570de91b37a1.dir
+      md5: 32e48de475b74a600d36339e135666d8.dir
       size: 941
       nfiles: 1
     - path: bin/evaluate

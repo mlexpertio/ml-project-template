@@ -12,12 +12,11 @@ class TextClassifier:
         self.positive_words = positive_words
         self.negative_words = negative_words
 
-    def fit(self, training_data):
-        df = pd.read_parquet(training_data)
+    def fit(self, train_data: pd.DataFrame, test_data: pd.DataFrame):
         self.positive_words = set()
         self.negative_words = set()
 
-        for _, item in df.iterrows():
+        for _, item in train_data.iterrows():
             words = item.text.lower().split()
             if item.label == Label.JUST_DO_IT:
                 self.positive_words.update(words)

@@ -15,11 +15,19 @@ Features:
 
 ## Install
 
+Make sure you have [`uv` installed](https://docs.astral.sh/uv/getting-started/installation/).
+
 Clone the repository:
 
 ```bash
 git clone git@github.com:mlexpertio/ml-project-template.git .
 cd ml-project-template
+```
+
+Install Python:
+
+```bash
+uv python install 3.12.8
 ```
 
 Create and activate a virtual environment:

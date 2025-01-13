@@ -6,4 +6,4 @@ from prophet.trainer import train
 seed_everything()
 configure_logging()
 
-train(Config.Path.DATA_DIR / Config.Dataset.TRAIN_FILE, Config.Path.MODELS_DIR)
+train(Config.Path.DATA_DIR, Config.Path.MODELS_DIR)
